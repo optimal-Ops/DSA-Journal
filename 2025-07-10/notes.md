@@ -1,4 +1,4 @@
-# 📌 Kth Largest/Smallest Element - Notes
+##  Kth Largest/Smallest Element - Notes
 
 ---
 
@@ -24,6 +24,8 @@ minHeap.add(5);       // Insert 5
 minHeap.offer(3);     // Insert 3
 minHeap.peek();       // View the minimum element
 minHeap.poll();       // Remove and return the minimum element
+```
+
 ## 2. Time and Space Complexity Comparison
 | Approach           | Time Complexity               | Space Complexity  | Notes                                  |
 | ------------------ | ----------------------------- | ----------------- | -------------------------------------- |
