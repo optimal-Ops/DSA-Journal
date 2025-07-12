@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class Solution {
     public void nearlySorted(int[] arr, int k) {
         quickSort(arr, 0, arr.length - 1);
@@ -34,7 +34,7 @@ class Solution {
         arr[j] = temp;
     }
 }
-=======
+
 class Solution {
     public void nearlySorted(int[] arr, int k) {
         quickSort(arr, 0, arr.length - 1);
@@ -70,4 +70,3 @@ class Solution {
         arr[j] = temp;
     }
 }
->>>>>>> 4eed470 (Save local changes before rebase)

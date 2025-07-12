@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-##  Kth Largest/Smallest Element - Notes
+## Kth Largest/Smallest Element - Notes
 
 ---
 
@@ -28,12 +27,14 @@ minHeap.poll();       // Remove and return the minimum element
 ```
 
 ## 2. Time and Space Complexity Comparison
+
 | Approach           | Time Complexity               | Space Complexity  | Notes                                  |
 | ------------------ | ----------------------------- | ----------------- | -------------------------------------- |
 | **1. Sort**        | `O(n log n)`                  | `O(1)` (in-place) | Simple but not optimal if `k` is small |
 | **2. Min-Heap**    | `O(n log k)`                  | `O(k)`            | Best for streaming or repeated queries |
 | **3. QuickSelect** | `O(n)` average, `O(n²)` worst | `O(1)`            | Fastest on average, but not always     |
-```
+
+````
 =======
 # 📌 Kth Largest/Smallest Element - Notes
 
@@ -67,5 +68,4 @@ minHeap.poll();       // Remove and return the minimum element
 | **1. Sort**        | `O(n log n)`                  | `O(1)` (in-place) | Simple but not optimal if `k` is small |
 | **2. Min-Heap**    | `O(n log k)`                  | `O(k)`            | Best for streaming or repeated queries |
 | **3. QuickSelect** | `O(n)` average, `O(n²)` worst | `O(1)`            | Fastest on average, but not always     |
-```
->>>>>>> 4eed470 (Save local changes before rebase)
+````

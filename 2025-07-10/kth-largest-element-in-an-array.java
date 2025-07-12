@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //approch-1
 class Solution {
     public int findKthLargest(int[] nums, int k) {
@@ -64,7 +64,7 @@ class Solution {
         arr[j] = temp;
     }
 }
-=======
+
 //approch-1
 class Solution {
     public int findKthLargest(int[] nums, int k) {
@@ -130,4 +130,3 @@ class Solution {
         arr[j] = temp;
     }
 }
->>>>>>> 4eed470 (Save local changes before rebase)
