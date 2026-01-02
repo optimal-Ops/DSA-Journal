@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.concurrent.*;
 class BinaryTrees {
 
     static class Node1 {
@@ -14,7 +13,6 @@ class BinaryTrees {
 
     Node1 root;
 
-    // Constructor
     BinaryTrees() {
         root = null;
     }
@@ -65,6 +63,70 @@ class BinaryTrees {
         }
         return ans;
     }
+    List<Integer> iterativePreOrder(Node1 node){
+        List<Integer> ans=new ArrayList<>();
+        Stack<Node1> st=new Stack<>();
+        st.push(node);
+        while(!st.isEmpty()){
+            node=st.pop();
+            ans.add(node.data);
+            if(node.right!=null){
+                st.push(node.right);
+            }
+            if(node.left!=null){
+                st.push(node.left);
+            }
+        }
+
+
+        return ans;
+    }
+    List<Integer> iterativeinOrder(Node1 node){
+        List<Integer> ans=new ArrayList<>();
+        Stack<Node1> st=new Stack<>();
+        while(true){
+            if(node!=null){
+                st.push(node);
+                node=node.left;
+
+            }else{
+                if(st.isEmpty()){
+                    break;
+                }
+                node=st.pop();
+                ans.add(node.data);
+                node=node.right;
+            }
+        }
+        return ans;
+    }
+
+    List<Integer> iterativePostOrder(Node1 node){
+        List<Integer> ans=new ArrayList<>();
+        Stack<Node1> st1=new Stack<>();
+        Stack<Integer> st2=new Stack<>();
+        st1.push(node);
+        while(!st1.isEmpty()){
+            node=st1.pop();
+            st2.add(node.data);
+
+            if(node.left!=null){
+                st1.push(node.left);
+
+            }
+            if(node.right!=null){
+                st1.push(node.right);
+            }
+
+        }
+        while(!st2.isEmpty()){
+            ans.add(st2.pop());
+        }
+
+
+
+        return ans;
+    }
 
 }
 
@@ -83,12 +145,34 @@ public class TreeTraversal {
 
         System.out.print("Inorder: ");
         tree.inorder(tree.root);
+        System.out.println("\nIterative Inorder: " );
+        List<Integer> Inorder=new ArrayList<>();
+        Inorder=tree.iterativeinOrder(tree.root);
+        for(int i:Inorder){
+            System.out.print(i+" ");
+        }
 
         System.out.print("\nPreorder: ");
         tree.preorder(tree.root);
+        List<Integer> preorder=new ArrayList<>();
+
+        System.out.println("\nIterative Preorder: " );
+        preorder=tree.iterativePreOrder(tree.root);
+        for(int i=0;i<preorder.size();i++){
+            System.out.print(preorder.get(i)+" ");
+        }
 
         System.out.print("\nPostorder: ");
         tree.postorder(tree.root);
+        System.out.println("\nIterative Inrder: " );
+        List<Integer> postOrder=new ArrayList<>();
+        postOrder=tree.iterativePostOrder(tree.root);
+        for(int i=0;i<postOrder.size();i++){
+            System.out.print(postOrder.get(i)+" ");
+        }
+
+
+        System.out.println("\nLevelOrder Traversal: ");
         List<List<Integer>> ans=new ArrayList<>();
         ans=tree.levelOrder(tree.root);
         System.out.println();
