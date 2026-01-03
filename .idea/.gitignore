@@ -1,0 +1,14 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Build / compiled output
+out/
+*.class
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node / config (if any)
+jsonconfig.json
